@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/iconos/favicon_x24.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/9efbb80e14.js" crossorigin="anonymous"></script>
+    <title>FussballTrikots</title>
+  </head>
+
+  <body>
+<!-- Modal del popup -->
+<div
+class="modal fade"
+id="popupModal"
+tabindex="-1"
+aria-labelledby="popupModal"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg modal-center">
+  <div class="modal-content">
+    <div
+      class="modal-body d-flex justify-content-between align-items-center flex-column">
+      <span
+        id="popupContent"
+        class="text-center modal-fuente fs-2 fw-bold bg-warning p-2 rounded-1 rounded-start w-100">
+      </span>
+    </div>
+    <div class="col-11 col-md-11 mx-auto d-block mb-5 rounded-1">
+      <div class="card p-2 m-2 align-items-center">
+        <form>
+          <div class="m-3 p-3">
+            <label for="ingreseMail" class="form-label"
+              >Ingrese su e-mail para recibir promociones</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="ingreseMail"
+              aria-describedby="emailAyuda" />
+            <div id="emailAyuda" class="form-text">
+              Nunca compartiremos sus datos personales
+            </div>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 mb-3 fs-3">
+            Suscribite!
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger w-100 mt3"
+            data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- ./Modal del popup -->
+
+    <!-- 1ro Nav -->
+    <div class="navbar m-0 p-0">
+      <div class="container-fluid bg-cabeza">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex flex-row align-items-center justify-content-center">
+              <span class="camion m-2"></span>
+              <p class="envio fs-5 fw-bold text-center text-dark m-2">
+                Envíos a todo el país
+              </p>
+            </div>
+            <!--./columnas-->
+          </div>
+          <!--./row-->
+        </div>
+        <!--./container-fluid-->
+      </div>
+      <!--./container-->
+    </div>
+    <!--./ 1ro Nav-->
+
+    <!--Navegacion-->
+    <header id="subir">
+      <nav
+        class="navbar navbar-expand-lg bg-barraNav sticky-top degrade cabecera_1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <a class="navbar-brand d-flex float-start" href="index.html">
+                <img
+                  src="img/logo/logo_ft.png"
+                  alt="logo"
+                  class="img-fluid logo" />
+                <h1 class="d-none d-md-block">FussballTrikots</h1></a
+              >
+            </div>
+          </div>
+          <button
+            class="navbar-toggler btn-redondo"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#barraNav"
+            aria-controls="barraNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="row collapse navbar-collapse" id="barraNav">
+            <div class="col-12 col-md-12 col-lg-12 d-lg-flex ms-auto float-end">
+              <ul class="navbar-nav ms-auto gap-2">
+                <li class="nav-item btn-barraNav" id="pagina_activa">
+                  <a class="nav-link btn-barraNav w-100" href="index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn-barraNav w-100" href="nosotros.html"
+                    >Nosotros</a
+                  >
+                </li>
+                <li class="nav-item btn-barraNav">
+                  <a class="nav-link btn-barraNav w-100" href="productos.html"
+                    >Productos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn-barraNav w-100" href="contacto.html"
+                    >Contacto</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Heading -->
+    </header>
+
+    <!-- 2do Nav -->
+    <div class="navbar m-0 p-0">
+      <div class="container-fluid bg-cabeza">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+              <form action="index.html" class="d-flex mt-2 mb-2">
+                <input
+                  class="form-control w-100"
+                  type="search"
+                  placeholder="Buscar un producto"
+                  aria-label="Buscar" />
+                <span class="btn btn-buscar"></span>
+                <span class="btn bolsaCarrito"></span>
+              </form>
+            </div>
+            <!--./columnas-->
+          </div>
+          <!--./row-->
+        </div>
+        <!--./container-fluid-->
+      </div>
+      <!--./container-->
+    </div>
+    <!--./ 2do Nav-->
+
+    <!--Carousel-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="p-0 m-0 col-md-12 col-lg-12">
+          <div
+            id="myCarousel"
+            class="carousel slide d-none d-md-block"
+            data-bs-ride="carousel">
+            <!--Argentina Messi-->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a class="bannerFuente" href="#">
+                  <img
+                    src="img/banner/banner_01.png"
+                    alt="Banner Argentina Campeon"
+                    class="img-fluid img-top carouselBanner" />
+                </a>
+              </div>
+
+              <!--2-->
+              <div class="carousel-item">
+                <img
+                  src="img/banner/banner_02.png"
+                  alt="Banner Mundial Qatar"
+                  class="img-fluid img-top carouselBanner" />
+              </div>
+
+              <!--3-->
+              <div class="carousel-item">
+                <img
+                  src="img/banner/banner_03.png"
+                  alt="Banner tienda"
+                  class="img-fluid img-top carouselBanner" />
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="prev">
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="next">
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Proximo</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- contenido -->
+  <main>
+  <!-- Nuevos Productos -->
+    <section>
+      <div class="container my-5">
+        <header class="mb-4">
+          <p class="fs-2 fw-bold">Nuevos Productos</p>
+        </header>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card my-2 shadow-0">
+              <a href="productos.html" class="img-wrap">
+                <div class="mask maskOferta">
+                  <div class="d-flex justify-content-start align-items-start h-100 m-2">
+                    <span><img src="img/iconos/oferta.png" alt="oferta de producto" class="img-fluid oferta"></span>
+                    <span class="badge bg-verMas text-dark m-2 p-2 ">Oferta!</span>
+                  </div>
+                </div>
+                <img src="img/chica/05_dinamarca_fte_500x500.png" class="card-img-top imgRatio" alt="Camiseta de Dinamarca"> 
+              </a>
+              <div class="card-body d-flex flex-column m-2 p-0 pt-2">
+                <span class="fs-5 fw-bold ">Dinamarca</span>
+                <span class="fs-6 "><strong>Marca:</strong> Hummel</span>
+                <div
+                class="grid-talles-contenedor d-flex flex-row mb-2">
+                <div class="grid-talles fs-6">XL</div>
+                <div class="grid-talles fs-6">L</div>
+                <div class="grid-talles fs-6">M</div>
+                <div class="grid-talles fs-6">S</div>
+              </div>
+                <p class="fs-5 text-end p-3 card-title">AR$19816.95</p>
+                <div class="d-grid gap-2">
+                  <a href="productos.html" class="btn btn-md btn-block bg-verMas m-2"
+                >Ver Mas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--02-->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card my-2 shadow-0">
+              <a href="productos.html" class="img-wrap">
+                <div class="mask maskOferta">
+                  <div class="d-flex justify-content-start align-items-start h-100 m-2">
+                  </div>
+                </div>
+                <img src="img/chica/01_argentina_fte_500x500.png" class="card-img-top imgRatio" alt="Camiseta de Argentina"> 
+              </a>
+              <div class="card-body d-flex flex-column m-2 p-0 pt-2">
+                <span class="fs-5 fw-bold ">Argentina</span>
+                <span class="fs-6 "><strong>Marca:</strong> Adidas</span>
+                <div
+                class="grid-talles-contenedor d-flex flex-row mb-2">
+                <div class="grid-talles fs-6">XL</div>
+                <div class="grid-talles fs-6 disabled bg-info">L</div>
+                <div class="grid-talles fs-6">M</div>
+                <div class="grid-talles fs-6">S</div>
+              </div>
+                <p class="fs-5 text-end p-3 card-title">AR$15634,50</p>
+                <div class="d-grid gap-2">
+                  <a href="productos.html" class="btn btn-md btn-block bg-verMas m-2"
+                >Ver Mas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        <!--03-->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card my-2 shadow-0">
+            <a href="productos.html" class="img-wrap">
+              <div class="mask maskOferta">
+                <div class="d-flex justify-content-start align-items-start h-100 m-2">
+                  <span><img src="img/iconos/oferta.png" alt="oferta de producto" class="img-fluid oferta"></span>
+                  <span class="badge bg-verMas text-dark m-2 p-2 ">Oferta!</span>
+                </div>
+              </div>
+              <img src="img/chica/04_croacia_fte_500x500.png" class="card-img-top imgRatio" alt="Camiseta de Croacia"> 
+            </a>
+            <div class="card-body d-flex flex-column m-2 p-0 pt-2">
+              <span class="fs-5 fw-bold ">Croacia</span>
+              <span class="fs-6 "><strong>Marca:</strong> Nike</span>
+              <div
+              class="grid-talles-contenedor d-flex flex-row mb-2">
+              <div class="grid-talles fs-6">XL</div>
+              <div class="grid-talles fs-6">L</div>
+              <div class="grid-talles fs-6">M</div>
+              <div class="grid-talles fs-6">S</div>
+            </div>
+              <p class="fs-5 text-end p-3 card-title">AR$27634,50</p>
+              <div class="d-grid gap-2">
+                <a href="productos.html" class="btn btn-md btn-block bg-verMas m-2"
+              >Ver Mas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      <!--04-->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card my-2 shadow-0">
+          <a href="productos.html" class="img-wrap">
+            <div class="mask maskOferta">
+              <div class="d-flex justify-content-start align-items-start h-100 m-2">
+                <span><img src="img/iconos/mensajes.png" alt="Buenos comentarios" class="img-fluid oferta"></span>
+                <span class="badge bg-verMas text-dark m-2 p-2 ">Mejores Reseñas!</span>
+              </div>
+            </div>
+            <img src="img/chica/02_alemania_fte_500x500.png" class="card-img-top imgRatio" alt="Camiseta de Alemania"> 
+          </a>
+          <div class="card-body d-flex flex-column m-2 p-0 pt-2">
+            <span class="fs-5 fw-bold ">Alemania</span>
+            <span class="fs-6 "><strong>Marca:</strong>Adidas</span>
+            <div
+            class="grid-talles-contenedor d-flex flex-row mb-2">
+            <div class="grid-talles fs-6">XL</div>
+            <div class="grid-talles fs-6">L</div>
+            <div class="grid-talles fs-6">M</div>
+            <div class="grid-talles fs-6">S</div>
+          </div>
+            <p class="fs-5 text-end p-3 card-title">AR$16634,50</p>
+            <div class="d-grid gap-2">
+              <a href="productos.html" class="btn btn-md btn-block bg-verMas m-2"
+            >Ver Mas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+          
+        </div>
+      </div>
+    </section>
+  <!-- Nuevos Productos -->
+
+
+  <!-- Mejores Productos -->
+    <section class="mb-3">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="card-banner h-100 mejoresProductos" >
+              <div class="p-3 p-lg-5 productosCards">
+                <p class="fs-3 text-light">Los mejores productos con un 80% de descuento</p>
+                <a class="btn btn-outline-light shadow-0 " href="productos.html">Ver oferta</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row mb-3 mb-sm-4 g-3 g-sm-4">
+              <div class="col-6 d-flex">
+                <div class="card w-100 mejoresProductos1">
+                  <div class="card-body">
+                    <p class="fs-5 text-white">Temporada Invierno</p>
+                    <p class="text-white-50">Nuevas tecnologías</p>
+                    <a class="btn btn-outline-light btn-sm " href="productos.html">Saber Mas</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 d-flex">
+                <div class="card w-100 mejoresProductos2">
+                  <div class="card-body">
+                    <p class="fs-5 text-white">La mejor calidad!</p>
+                    <p class="text-white-50">Ofertas Exclusivas</p>
+                    <a class="btn btn-outline-light btn-sm" href="productos.html">Saber Mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- row.// -->
+
+            <div class="card mejoresProductos3">
+              <div class="card-body">
+                <p class="fs-5 text-white">Descuentos especiales</p>
+                <p class="text-white-50">No te lo podes perder!</p>
+                <a class="btn btn-outline-light btn-sm" href="productos.html">Saber Mas</a>
+
+              </div>
+            </div>
+          </div>
+          <!-- col.// -->
+        </div>
+        <!-- row.// -->
+      </div>
+      <!-- container end.// -->
+    </section>
+    <!-- Mejores Productos -->
+
+    <!--formulario Suscripcion-->
+    <section class="container">
+      <div class="row">
+        <div class="col-12 mt-3">
+          <p class="fs-2 fw-bold text-center text-dark">Suscribite para recibir Promociones</p>
+        </div>
+        <div class="col-12 col-md-10 mx-auto d-block rounded-1">
+          <div class="card p-2 m-2 align-items-center degrade">
+            <form>
+              <div class="m-3 p-3">
+                <label for="ingreseMail1" class="form-label"
+                  >Ingrese su e-mail para recibir promociones</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="ingreseMail1"
+                  aria-describedby="emailAyuda1" />
+                <div id="emailAyuda1" class="form-text">
+                  Nunca compartiremos sus datos personales
+                </div>
+              </div>
+              <button type="submit" class="btn btn-suscribite w-100 mb-3 fs-3">
+                Suscribite!
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!--marcas-->
+  <div class="container">
+    <div class="row">
+      <div class="d-none d-lg-block col-md-10 m-auto mb-3">
+        <p class="fs-2">Marcas que nos acompañan</p>
+        <div class="f-carousel" id="myCarouselMarcas">
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/adidas.png"
+              alt="Marca de adidas"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/nike.png"
+              alt="Marca de nike"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/asics.png"
+              alt="Marca de asics"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/converse.png"
+              alt="Marca de converse"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/fila.png"
+              alt="Marca de fila"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/lecoq.png"
+              alt="Marca de lecoq"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/lotto.png"
+              alt="Marca de lotto"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/puma.png"
+              alt="Marca de puma"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/rebook.png"
+              alt="Marca de rebook"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/topper.png"
+              alt="Marca de topper"
+              class="marcas" />
+          </div>
+          <div class="f-carousel__slide">
+            <img
+              src="img/iconos/marcas/underarmor.png"
+              alt="Marca de underarmor"
+              class="marcas" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--marcas-->
+
+  </main>
+
+  
+
+    <!-- Footer -->
+    <!--acorion de footer-->
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-12">
+            <div class="card shadow-1 border rounded-3 mt-3">
+              <div class="card-body">
+                <div class="row g-0">
+                  <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                    <div class="me-md-3 mb-3 mb-md-0">
+                      <img
+                        src="img/footer/foto_Javi.jpg"
+                        alt="foto Perfil"
+                        class="d-none d-sm-none d-md-block img-fluid fotoFooter" />
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6 col-md-5 col-sm-7">
+                    <p class="fs-4">Javier Gelberg</p>
+                    <p class="fs-6 pt-1 border-bottom border-warning">
+                      17/04/1981
+                    </p>
+                    <p class="fs-6 pt-1 border-bottom border-warning">
+                      javier.gelberg@gmail.com
+                    </p>
+                    <p class="fs-6 pt-1 border-bottom border-warning">
+                      TP Final
+                    </p>
+                    <p class="fs-6 pt-1 border-bottom border-warning">
+                      DWN2CV - 2023
+                    </p>
+                  </div>
+
+                  <div class="col-xl-3 col-md-3 col-sm-5 col-12">
+                    <ul id="social" class="lista">
+                      <li id="ig">
+                        <a
+                          href="https://www.instagram.com/javi_gelberg/"
+                          target="_blank"
+                          >Instagram</a
+                        >
+                      </li>
+                      <li id="fb">
+                        <a href="https://www.facebook.com/" target="_blank"
+                          >Facebook</a
+                        >
+                      </li>
+                      <li id="tw">
+                        <a href="https://twitter.com/" target="_blank"
+                          >Twitter</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ./Footer -->
+
+    <div class="fondoFooter">
+      <img src="img/footer/footer_papel.png" alt="fondo papel" class="w-100" />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12">
+          <a href="#subir" class="subir">
+            <img
+              src="img/iconos/arriba.png"
+              alt="Subir al inicio"
+              class="img-fluid footerSubir"
+          /></a>
+        </div>
+      </div>
+      <!--./contendor_subir-->
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
+    <script src="js/carouselMarcas.js"></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("pagina_activa");
+      };
+    </script>
+    <script src="js/textoAleatorio.js"></script>
+    <script src="js/carouselBanderas.js"></script>
+
+  </body>
+</html>
